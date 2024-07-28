@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
+    maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>RCON Web Controller</title>
+    <style>
+        #respone-viewer {
+            padding: 10px;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        .color-black { color: #000000; }
+        .color-dark_blue { color: #0000AA; }
+        .color-dark_green { color: #00AA00; }
+        .color-dark_aqua { color: #00AAAA; }
+        .color-dark_red { color: #AA0000; }
+        .color-dark_purple { color: #AA00AA; }
+        .color-gold { color: #FFAA00; }
+        .color-gray { color: #AAAAAA; }
+        .color-dark_gray { color: #555555; }
+        .color-blue { color: #5555FF; }
+        .color-green { color: #55FF55; }
+        .color-aqua { color: #55FFFF; }
+        .color-red { color: #FF5555; }
+        .color-light_purple { color: #FF55FF; }
+        .color-yellow { color: #FFFF55; }
+        .color-white { color: #FFFFFF; }
+        .bold { font-weight: bold; }
+        .italic { font-style: italic; }
+        .underline { text-decoration: underline; }
+        .strikethrough { text-decoration: line-through; }
+        .obfuscated { text-decoration: none; /* Implementing obfuscation in CSS is impractical */ }
+    </style>
+</head>
+<body>
+    <h1>RCON Web Controller</h1>
+    <hr>
+    <pre id="respone-viewer">{{ response|safe }}</pre>
+    <form method="post">
+        <label for="command">command:</label>
+        <input type="text" id="command" name="command">
+        <button type="submit">전송</button>
+    </form>
+    <hr>
+    <a href="/logout">로그아웃</a>
+</body>
+</html>

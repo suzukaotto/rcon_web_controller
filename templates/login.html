@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
+    maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>RCON Web Controller</title>
+</head>
+<body>
+    <h1>로그인</h1>
+    <hr>
+    <form method="post">
+        <label for="username">id:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">pw:</label>
+        <input type="password" id="password" name="password"><br>
+        <button type="submit">로그인하기</button>
+    </form>
+    <hr>
+    <p>{{ error }}</p>
+</body>
+</html>
