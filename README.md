@@ -32,8 +32,8 @@
 
 3. 프로젝트의 루트 디렉토리에 `.env` 파일을 생성하고 다음 환경 변수를 추가합니다:
     ```env
-    WEB_IP=127.0.0.1
-    WEB_PORT=5000
+    SERVER_IP=127.0.0.1
+    SERVER_PORT=5000
     RCON_IP=127.0.0.1
     RCON_PORT=25575
     RCON_PASSWORD=your_rcon_password
